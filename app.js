@@ -1,6 +1,7 @@
 const express=require("express")
 const cors=require("cors")
 const session=require('express-session');
+const menu=require("./router/menu");
 var app=express();
 
 //配置跨域
@@ -18,6 +19,9 @@ app.use(session({
 
 //配置项目静态目录
 app.use(express.static("public"));
+//配置路由
+app.use("/menu",menu);
+
 
 app.listen(8080,()=>{
    console.log("创建8080成功") 

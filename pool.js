@@ -9,4 +9,4 @@ var pool=mysql.createPool({
     connectionLimit:15,
 })
 
-model.export.pool=pool
+module.exports=pool;
