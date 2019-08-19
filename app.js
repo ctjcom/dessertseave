@@ -2,6 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const session=require('express-session');
 const menu=require("./router/menu");
+const index=require("./router/index");
 var app=express();
 
 //配置跨域
@@ -21,6 +22,7 @@ app.use(session({
 app.use(express.static("public"));
 //配置路由
 app.use("/menu",menu);
+app.use("/",index);
 
 
 app.listen(8080,()=>{

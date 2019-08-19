@@ -64,7 +64,7 @@ INSERT INTO menu VALUES(null,"水煮牛肉",3,"http://i1.chuimg.com/93a9aaddbb10
 INSERT INTO menu VALUES(null,"干锅香辣虾",3,"http://i2.chuimg.com/33389c92876411e6b87c0242ac110003_384w_512h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg",null,0,0);
 INSERT INTO menu VALUES(null,"香煎土豆片",3,"http://i2.chuimg.com/571701c609884df0aa79a753297829a0_750w_1000h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg",null,0,0);
 INSERT INTO menu VALUES(null,"剁椒鱼头",3,"http://i2.chuimg.com/529d5add5ea6459390fcb6c114b1a947_1080w_864h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg",null,0,0);
-/*4*/
+/*4粤菜*/
 INSERT INTO menu VALUES(null,"香香排骨煲","4","http://i2.chuimg.com/e5568eb79dfe41f39092bf9abb9d4d39_640w_360h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",null,"0","0");
 INSERT INTO menu VALUES(null,"广式糯米卷","4","http://i2.chuimg.com/446ccd9511814adb8e546242516172ce_1215w_2160h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",null,"0","0");
 INSERT INTO menu VALUES(null,"广式鸡煲","4","http://i2.chuimg.com/2d4f90f36fad4fe9b650a8ed92f30718_5184w_3456h.jpg?imageView2/2/w/660/interlace/1/q/90",null,"0","0");
@@ -75,7 +75,7 @@ INSERT INTO menu VALUES(null,"广式凉拌莲藕","4","http://i1.chuimg.com/bed9
 INSERT INTO menu VALUES(null,"柠檬鸡翅","4","http://i2.chuimg.com/0ffe98fa25ff4f9b983a4b3c0ea4c197_2048w_1536h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",null,"0","0");
 INSERT INTO menu VALUES(null,"广式猪骨汤","4","http://i1.chuimg.com/821211388a4b49f8b6a49c3f8a4c05a5_2886w_3072h.jpg@2o_50sh_1pr_1l_215w_136h_1c_1e_90q_1wh",null,"0","0");
 INSERT INTO menu VALUES(null,"广式脆皮烧肉","4","http://i2.chuimg.com/43ddc2e1d8764287a5b2f02f5a54a473_1080w_864h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",null,"0","0");
-/*5*/
+/*5甜点*/
 INSERT INTO menu VALUES(null, '秒杀哈根达斯无冰渣冰激凌',5,'http://i2.chuimg.com/f7ee4cb431f5454788c6b8c761020008_1280w_1024h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90','原方来自哈尼K克，她的是50克糖，我觉得太甜了，减了10克，最后蛋黄糊和淡奶油混合后再打发一下，这样做出来的冰激凌才能真正无冰渣，你们也试试吧，孩子很爱吃',0,0);
 INSERT INTO menu VALUES(null, '雪媚娘（超详细）',5,'http://i2.chuimg.com/2bc96a728aca11e6a9a10242ac110002_1242w_1221h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg','糯米粉买水磨的，奶油选择动物性淡奶油',0,0);
 INSERT INTO menu VALUES(null, '冻酸奶芝士蛋糕',5,'http://i1.chuimg.com/2e023d4c874511e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_640w_520h_1c_1e_90q_1wh.jpg','1. 这款冻芝士是可以不用烤箱的，不过我做的时候还是用烤箱烤了戚风蛋糕代替了饼底，我觉得消化饼干太硬了，还是绵软的蛋糕配上芝士口感更好。<br>
@@ -1065,3 +1065,16 @@ mid INT, #所属菜单
 time INT,#发表时间
 content VARCHAR(250)#评论内容
 );
+
+/* 创建每日推荐表*/
+CREATE TABLE recommend(
+rid INT PRIMARY KEY AUTO_INCREMENT,
+mname VARCHAR(20),#菜单名称
+type INT,#菜单所属分类
+mimg VARCHAR(100)#成品图片
+);
+INSERT INTO recommend VALUES(null,"早餐鸡蛋饼",1,"http://i2.chuimg.com/1c83091c273a11e7947d0242ac110002_1775w_2394h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg");
+INSERT INTO recommend VALUES(null,"麻婆豆腐",2,"http://i2.chuimg.com/ab03619633db4b4d8d3ece0750c18e70_2016w_1008h.jpg?imageView2/1/w/800/h/600/q/90/format/jpg");
+INSERT INTO recommend VALUES(null,"麻辣小龙虾",3,"http://i2.chuimg.com/e55937298f2549b3ab87550bed33ec40_1035w_827h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg");
+INSERT INTO recommend VALUES(null,"广式鸡煲",4,"http://i2.chuimg.com/2d4f90f36fad4fe9b650a8ed92f30718_5184w_3456h.jpg?imageView2/2/w/660/interlace/1/q/90");
+INSERT INTO recommend VALUES(null, '双皮奶',5,'http://i1.chuimg.com/66477c7886f811e6b87c0242ac110003_457w_685h.jpg@2o_50sh_1pr_1l_280w_190h_1c_1e_90q_1wh');
