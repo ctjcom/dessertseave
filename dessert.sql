@@ -41,7 +41,7 @@ INSERT INTO menu VALUES(null,"双色红薯杂粮包",1,"http://i2.chuimg.com/714
 INSERT INTO menu VALUES(null,"滑腻柔软的美式炒蛋",1,"http://i2.chuimg.com/7443250aa4954e2cb2b148b0668a4020_1500w_1124h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg","炒蛋的时候火一定要小一点，可以一边冥想一边等待。在蛋液没有全部凝结的时候一定要离火，这样炒出来的蛋才能滑腻柔软，因为蛋液从熟到老，真的只是如同人生一般的匆匆一瞬间哦。",0,0);
 INSERT INTO menu VALUES(null,"土豆丝鸡蛋饼",1,"http://i2.chuimg.com/9622c1568b8911e6a9a10242ac110002_1920w_1080h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg","普通面粉、饺子粉、小麦粉之类的都可以；高粉、低粉、淀粉我没有试过哈，尝试过的小伙伴可以留言参考吖。",0,0);
 /*川菜*/
-INSERT INTO menu VALUES(null,"麻婆豆腐",2,"http://i2.chuimg.com/ab03619633db4b4d8d3ece0750c18e70_2016w_1008h.jpg?imageView2/1/w/800/h/600/q/90/format/jpg","大家记得收藏点赞关注哦",0,0);
+INSERT INTO menu VALUES(null,"麻婆豆腐",2,"http://i2.chuimg.com/7eb024afed0e456c90f330247225ffe4_2044w_1080h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg","大家记得收藏点赞关注哦",0,0);
 INSERT INTO menu VALUES(null,"川菜鱼香肉丝",2,"http://i2.chuimg.com/7a756ebc882911e6b87c0242ac110003_650w_650h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg","青菜，肉的量可以根据自己的口味随意增减 ，这道菜非常简单，非常好吃，极力推荐大家试试～",0,0);
 INSERT INTO menu VALUES(null,"宫保鸡丁",2,"http://i2.chuimg.com/fada9853311d4a9ca3f9aaab4d3dcd9e_1080w_864h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg","1.这里可以把配菜换成：1、莴笋丁、黄葱、干辣椒;2、炸过的土豆丁和洋葱，料汁不换，味道都很不错。
 2，翻炒可以快一点，因为鸡丁也是滑油过了，其他也要保持脆度，这样鸡丁才会入口特别嫩。
@@ -1074,7 +1074,7 @@ type INT,#菜单所属分类
 mimg VARCHAR(100)#成品图片
 );
 INSERT INTO recommend VALUES(null,"早餐鸡蛋饼",1,"http://i2.chuimg.com/1c83091c273a11e7947d0242ac110002_1775w_2394h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg");
-INSERT INTO recommend VALUES(null,"麻婆豆腐",2,"http://i2.chuimg.com/ab03619633db4b4d8d3ece0750c18e70_2016w_1008h.jpg?imageView2/1/w/800/h/600/q/90/format/jpg");
+INSERT INTO recommend VALUES(null,"麻婆豆腐",2,"http://i2.chuimg.com/7eb024afed0e456c90f330247225ffe4_2044w_1080h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg");
 INSERT INTO recommend VALUES(null,"麻辣小龙虾",3,"http://i2.chuimg.com/e55937298f2549b3ab87550bed33ec40_1035w_827h.jpg?imageView2/1/w/640/h/520/q/90/format/jpg");
 INSERT INTO recommend VALUES(null,"广式鸡煲",4,"http://i2.chuimg.com/2d4f90f36fad4fe9b650a8ed92f30718_5184w_3456h.jpg?imageView2/2/w/660/interlace/1/q/90");
 INSERT INTO recommend VALUES(null, '双皮奶',5,'http://i1.chuimg.com/66477c7886f811e6b87c0242ac110003_457w_685h.jpg@2o_50sh_1pr_1l_280w_190h_1c_1e_90q_1wh');
