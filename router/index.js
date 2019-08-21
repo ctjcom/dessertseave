@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get("/index", (req, res) => {
     var data={};
-    var sql = `SELECT mid,mname,type,mimg FROM menu WHERE type=? LIMIT ?,?`
+    var sql = `SELECT mid,mname,type,mimg,collect,browse FROM menu WHERE type=? LIMIT ?,?`
         new Promise((resolve,reject)=>{
             pool.query(sql, [1,0,4],(err,result)=>{
                 if(err)throw err;
