@@ -13,37 +13,47 @@ router.get("/index", (req, res) => {
                 resolve();
             })
         }).then(()=>{
-            pool.query(sql, [2,0,4],(err,result)=>{
-                if(err)throw err;
-                //川菜
-                data.siChuan=result;
+            return new Promise((resolve,reject)=>{
+                pool.query(sql, [2,0,4],(err,result)=>{
+                    if(err)throw err;
+                    //川菜
+                    data.siChuan=result;
+                    resolve();
+                })
             })
         }).then(()=>{
-            pool.query(sql, [3,0,4],(err,result)=>{
-                if(err)throw err;
-                //湘菜
-                data.xiangcai=result;
+            return new Promise((resolve,reject)=>{
+                pool.query(sql, [3,0,4],(err,result)=>{
+                    if(err)throw err;
+                    //湘菜
+                    data.xiangcai=result;
+                    resolve();
+                })    
             })
         }).then(()=>{
-            pool.query(sql, [4,0,4],(err,result)=>{
-                if(err)throw err;
-                //粤菜
-                data.yuecai=result;
+            return new Promise((resolve,reject)=>{
+                pool.query(sql, [4,0,4],(err,result)=>{
+                    if(err)throw err;
+                    //粤菜
+                    data.yuecai=result;
+                    resolve();
+                })    
             })
         }).then(()=>{
-            pool.query(sql, [5,0,4],(err,result)=>{
-                if(err)throw err;
-                //甜点
-                data.dessert=result;  
-            })
+            return new Promise((resolve,reject)=>{
+                pool.query(sql, [5,0,4],(err,result)=>{
+                    if(err)throw err;
+                    //甜点
+                    data.dessert=result;  
+                    resolve();
+                })   
+            }) 
         }).then(()=>{
-            pool.query(`SELECT * FROM recommend`,(err,result)=>{
-                //每日推荐
-                data.recommend=result;
-                res.send(data);
-            })
+                pool.query(`SELECT * FROM recommend`,(err,result)=>{
+                    //每日推荐
+                    data.recommend=result;
+                    res.send(data);
+                })
+            }) 
         })
-    }
-)
-
 module.exports = router;
