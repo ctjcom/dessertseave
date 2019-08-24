@@ -4,7 +4,7 @@ var router = express.Router();
 /*根据菜单id查询*/
 router.get("/menu", (req, res) => {
     var mid = req.query.mid;
-    console.log(mid);
+    //console.log(mid);
     var data = {};
     var sqla = `SELECT * FROM menu WHERE mid=?`
     pool.query(sqla, [mid], (err, result) => {
